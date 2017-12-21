@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580575EndB.MainPage"
+    Title="ing car">
+
+  <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="New"
+            x:Name="newButton" />
+    </ContentPage.ToolbarItems>
+    <ListView
+        x:Name="productListView"
+        RowHeight="200">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Text="edit"
+                            Clicked="Edit_Clicked"
+                            CommandParameter="{Binding .}" />
+                        <MenuItem
+                            Text="delete"
+                            IsDestructive="true"
+                            Clicked="Delete_Clicked"
+                            CommandParameter="{Binding .}" />
+                    </ViewCell.ContextActions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="100" />
+                            <ColumnDefinition />
+                            <ColumnDefinition
+                                Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            BackgroundColor="Silver" />
+                        <StackLayout
+                            Grid.Column="1"
+                            Orientation="Vertical">
+                            <Label
+                                Text="{Binding CateoryCar}"
+                                FontAttributes="Bold" />
+                            <Label
+                                Text="{Binding Brand}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Grand}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Year}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Km}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Description}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Price,StringFormat='ราคา'}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Province}"
+                                LineBreakMode="TailTruncation" />
+                            <Label
+                                Text="{Binding Numberphone}"
+                                LineBreakMode="TailTruncation" />
+                        </StackLayout>
+                        <Button
+                            Text="+"
+                            FontSize="30"
+                            Grid.Column="2"
+                            VerticalOptions="End"
+                            HeightRequest="50"
+                            BackgroundColor="Gray" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

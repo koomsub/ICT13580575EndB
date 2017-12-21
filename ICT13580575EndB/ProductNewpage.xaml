@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="ICT13580575EndB.ProductNewpage">
+  <ScrollView
+        Padding="20">
+        <StackLayout
+            Orientation="Vertical">
+            <Label
+                x:Name="titleLabel"
+                VerticalOptions="Center"
+                Text="Add Car"
+                HorizontalTextAlignment="Center"
+                HeightRequest="30"
+                BackgroundColor="White" />
+            <Label
+                Text="ประเภท"
+                FontSize="14"
+                TextColor="Blue" />
+            <Picker
+                x:Name="cateoryPicker"
+                Title="ประเภท" />
+            <Label
+                Text="ยี่ห้อ"
+                FontSize="14"
+                TextColor="Blue" />
+            <Picker
+                x:Name="brandPicker"
+                Title="ยี่ห้อ" />
+            <Label
+                Text="รุ่น"
+                FontSize="14"
+                TextColor="Green" />
+            <Entry
+                x:Name="grandEntry"
+                Placeholder="รุ่น"
+                Keyboard="Text" />
+            
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="จำนวน"
+                    TextColor="Blue"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    x:Name="yearLabel"
+                    Text="2000"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Text="ปี"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+            
+            <Stepper
+                x:Name="yearStepper"
+                Maximum="5000"
+                Minimum="2000"
+                Value="1"
+                WidthRequest="600" />
+            
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="เลขไมล์"
+                    TextColor="Blue" />
+                <Label
+                    x:Name="mileLabel"
+                    Text="0" />
+                <Label
+                    Text="กม." />
+            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Text="0"
+                    VerticalTextAlignment="Center" />
+                <Slider
+                    x:Name="mileSlider"
+                    Grid.Column="1"
+                    Maximum="100000"
+                    Minimum="0"
+                    Value="0" />
+                <Label
+                    Text="100,000"
+                    Grid.Column="2"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+            <Label
+                Text="สี"
+                TextColor="Blue"
+                VerticalTextAlignment="Center" />
+            <Picker
+                x:Name="colorPicker"
+                Title="สี" />
+            <Label
+                Text="รถดีเลอร์?"
+                TextColor="Blue"
+                VerticalTextAlignment="Center" />
+            <Switch
+                IsToggled="true" />
+            <Label
+                Text="รายละเอียด"
+                FontSize="16" />
+            <Editor
+                BackgroundColor="Silver"
+                x:Name="detailEditor"
+                HeightRequest="100" />
+             <Label
+                Text="ราคา"
+                FontSize="14"
+                TextColor="Blue" />
+            <Entry
+                x:Name="priceEntry"
+                Placeholder="ราคา"
+                Keyboard="Numeric" />
+            <Label
+                Text="จังหวัด"
+                FontSize="14"
+                TextColor="Blue"
+                VerticalTextAlignment="Center" />
+            <Picker
+                x:Name="provincePicker"
+                Title="จังหวัด" />
+            <Label
+                Text="เบอร์โทร"
+                FontSize="14"
+                TextColor="Blue" />
+            <Entry
+                x:Name="phoneEntry"
+                Placeholder="เบอร์โทรศัพท์"
+                Keyboard="Telephone" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Text="ยกเลิก"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    x:Name="cancelCar"/>
+                <Button
+                    Text="บันทึก"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                     x:Name="addCar"
+                    Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
